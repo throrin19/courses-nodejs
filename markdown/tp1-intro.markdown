@@ -11,7 +11,7 @@ Tous les TP se présenteront de la manière suivante :
 + Une introduction de la technologie/module utilisés sur le TP via l'utilisation des cours fournis par nodeschool.io.
 + Un projet à réaliser durant toute la durée du module.
 
-Ce TP a pour but de faire un rappel bref aux base javascript pour la partie ES6, asynchrone et clojures.
+Ce TP a pour but de faire un rappel bref aux bases javascript pour la partie ES6, asynchrone et clojures.
 Vous verrez ensuite l'utilisation de l'éditeur Webstorm.
 
 **Attention** : tous les TP seront fait sur la dernière version LTS (long support) de NodeJS disponible. Il s'agit de la version `6.9.1` au moment de la rédaction de ce TP.
@@ -58,7 +58,7 @@ Normalement vous devriez arriver sur un écran de ce genre :
 Nous allons commencer ce TP avec la réalisation des *tutoriels* suivants :
 
 - `javascripting` : Si vous voulez vous rappeler les bases du développement javascript, faites le, sinon passez au suivant.
-- `scope-chains-closures` : Apprenez le détaildes Scope, Scope Chains, Closures, et Garbage Collection.
+- `scope-chains-closures` : Apprenez le détail des Scope, Scope Chains, Closures, et Garbage Collection.
 - `count-to-6` : Apprenez comment utiliser les caractéristiques de ES6.
 - `learnyounode` : Apprenez les bases de node : asynchronous i/o, http.
 
@@ -130,5 +130,48 @@ Et là, vous devriez arriver sur la fenêtre suivante :
 6. Choisissez le binaire de node v6.9.1 qui devrait être dans `~/.nvm/versions/node/v6.9.1/bin/node`
 7. Activez l'assistance du code de Node.JS
 8. Appliquez les changements
+9. Vous devrez faire la même chose exceptionnellement pour le projet en cours via **File => Settings**.
 
 Normalement après ces réglages par défaut, tous vos projets devraient prendre en compte ES6 et nodeJS 6.9.1
+
+### Lancement de son application
+
+Vous allez créer dans votre projet un fichier `server.js` contenant le code suivant :
+
+```javascript
+'use strict';
+
+const http = require('http');
+
+let server = http.createServer((request, response) => {
+  response.writeHead(200, {"Content-Type": "text/plain"});
+  response.end("Hello World\n");
+});
+
+server.listen(8000);
+
+console.log("Server running at http://127.0.0.1:8000/");
+```
+
+1. Dans la barre de lancement de votre application, cliquez sur la flèche descendante puis sur *Edit configuration*.
+2. Cliquez sur l'icône **+** puis sur **Node.js**
+3. Dans la ligne *Node Interpreter*, vérifiez que vous êtes bien sur la v6.9.1 sinon mettre le bon chemin (`~/.nvm/versions/node/v6.9.1/bin/node`)
+4. Dans *Working directory*, ciblez votre projet
+5. Dans *Javascript File*, mettez bien `server.js`.
+6. Mettez le nom que vous voulez dans *Name*.
+7. Validez
+
+Vous devriez normalement vous retrouver avec ceci :
+
+<center>
+![toolbox](/resources/tp1/webstorm-003.png)
+<br>
+<br>
+</center>
+
++ Le bouton *play* représenté par la flèche verte sert à lancer l'application normalement.
++ Le bouton *Debug* représenté par l'insect vert permet de lancer l'application en mode Debug (merci captain Obvious).
+
+La partie Debug sera traité dans un TP propre plus tard. Pour le moment clquez uniquement sur la flèche verte. Vous devriez voir une fenêtre s'ouvrir avec la phrase "Server running at http://127.0.0.1:8000/".
+
+Et si vous ouvrez le navigateur pour aller à l'adresse indiquée, vous devriez avoir le message "Hello World".
