@@ -10,7 +10,7 @@ Ce TP a pour but de vous initier à GIT qui permettra de versionner, sauvegarder
 
 ## GIT
 
-Pour la partie GIT, je vous invite à vous créer un compte sur https://github.com qui est le site le plus connu et surtout le plus utilisé par de potentiels efuturs employeurs afin de voir vos différents projets.
+Pour la partie GIT, je vous invite à vous créer un compte sur https://github.com qui est le site le plus connu et surtout le plus utilisé par de potentiels futurs employeurs afin de voir vos différents projets.
 
 Ensuite, je vous invite à réaliser le tutoriel nodeschool.io suivant :
 
@@ -28,7 +28,7 @@ NPM pour **N**ode **P**ackage **M**anager sert à installer différents packages
 
 ### Le scope
 
-Le **scope** permet de publier un package au sein d'un "nom de domaine" sous la forme `@votrenom`. Au lieu par exemple d'installer le package via :
+Le **scope** permet de publier un package au sein d'un "nom d'organisation" sous la forme `@organisation`. Au lieu par exemple d'installer le package via :
 
 ```
 npm install monpackage
@@ -37,7 +37,7 @@ npm install monpackage
 vous l'installerez via
 
 ```
-npm install @votrenom/monpackage
+npm install @organisation/monpackage
 ```
 
 ### Package.json
@@ -48,7 +48,7 @@ Le fichier `package.json` de notre projet ressence toutes les libraries externes
 
 Nous allons nous concentrer ici sur les champs `devDependencies`, `dependencies` et `peerDependencies`.
 
-- `deppendencies` : Ce sont les dépendances principales de votre module. Elles permettent à celui-ci de fonctionner correctement en production lorsqu'il est compilé (si besoin).
+- `dependencies` : Ce sont les dépendances principales de votre module. Elles permettent à celui-ci de fonctionner correctement en production lorsqu'il est compilé (si besoin).
 - `devDependencies` : Ce sont toutes les dépendances dont vous avez besoin pour développer et tester votre projet (par exemple toutes les extensions gulp propre à la compilation de votre projet front).
 - `peerDependencies` : Ici cela permet de valider la résolution des dépendances entre votre package et un autre.
 
@@ -56,11 +56,11 @@ Pour plus d'informations sur `peerDependencies`, je vous invite à lire cet arti
 
 Bien entendu, outre la résolution des dépendances, vous avez aussi la résolution des versions des dépendances. De base, npm installe toujours la version avec un `^` juste devant.
 
-Ex : `"async" : "^1.8.1"` peut vous installer, lors du premier `npm install` une version de `async` enetre la `1.8.1` et la `2.0.0`.
+Ex : `"async" : "^1.8.1"` peut vous installer, lors du premier `npm install` une version de `async` entre la `1.8.1` et la `2.0.0`.
 
-Au contraire `"async" : "^0.4.0"` peut vous installer async entre lea version `0.4.0` et `0.5.0`.
+Au contraire `"async" : "^0.4.0"` peut vous installer async entre la version `0.4.0` et `0.5.0`.
 
-Pour vérifier tout ceci, je vous invite à jeter un oeuiil à cet article chez NPM : https://docs.npmjs.com/misc/semver
+Pour vérifier tout ceci, je vous invite à jeter un oeil à cet article chez NPM : https://docs.npmjs.com/misc/semver
 
 &nbsp;
 &nbsp;
@@ -75,7 +75,7 @@ Pour vérifier tout ceci, je vous invite à jeter un oeuiil à cet article chez 
 
 Réalisation d'un module de cryptage de mots de passe permettant de simplifier les appels du module `encrypt` fourni par Node.JS.
 
-Vous devrez créer le projet sur github afin de le publier ensuite au sein de NPM via un scope qui devra être le pseudo github de celui hébergeant le projet.
+Vous devrez créer le projet sur github afin de le publier ensuite au sein de NPM via un scope qui devra être les 2 première lettres du nom/prénom de chaque personne de votre binôme.
 
 Le nom du package sera `iut-encrypt`.
 
