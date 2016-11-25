@@ -59,6 +59,7 @@ Nous allons commencer ce TP avec la réalisation des *tutoriels* suivants :
 
 - `javascripting` : Si vous voulez vous rappeler les bases du développement javascript, faites le, sinon passez au suivant.
 - `scope-chains-closures` : Apprenez le détail des Scope, Scope Chains, Closures, et Garbage Collection.
+- `async-you` : Appenez à utiliser la library async.
 - `count-to-6` : Apprenez comment utiliser les caractéristiques de ES6.
 - `learnyounode` : Apprenez les bases de node : asynchronous i/o, http.
 
