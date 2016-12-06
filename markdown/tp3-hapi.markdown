@@ -5,8 +5,6 @@
 <br><br>
 </center>
 
-## Introduction
-
 Hapi est un framework Node.JS développé par la société Wallmart et ayant comme philosophie que tout est plugin à l'intérieur des projets Hapi.
 
 Hapi, tout comme ExpressJS ou Koa rajoute une surcouche au module Http pour permettre un meilleur découpage du code et une facilité de déclaration des différentes routes.
