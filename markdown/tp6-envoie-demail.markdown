@@ -34,7 +34,7 @@ Lors du TP précédent, certains d'entre vous ont eu du mal à s'en sortir ou co
 - Les models mongoose retourné via la méthode plus haut vous permettent d'utiliser ses fonctions statiques et magiques (find, findAll, findOne, update, insert, ...).
 - Si vous voulez créer une instance de votre model, vous devrez faire `let model = new server.database.monmodel()`.
 - Au travers de `json-mongoose` toute fonction du model est promisifiée (vous pouvez faire `model.save().then()`, `mommodel.find().then().catch()`, ...)
-- Si vous obtenez l'erreur `model monmodel.js is incorrect`, commentez tous les `require` non utilisés et vérifiez que votre schéma soit correct.
+- Si vous obtenez l'erreur `model monmodel.js is incorrect`, commentez tous les `require` non utilisés, que vous utilisez bien `module.exports` (avec un s) et vérifiez que votre schéma soit correct.
 - Niveau organisation du code : Un handler/route pour une partie métier. Par exemple à partir de ce TP vous devriez avoir les routes et handlers suivants :
     - default
     - users
