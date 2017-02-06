@@ -1,5 +1,9 @@
 # TP 7 : Analyse, Debug et
 
+<center>
+![meme](../resources/bug.jpg)
+</center>
+
 ## Lancement de son application
 
 1. Dans la barre de lancement de votre application, cliquez sur la flèche descendante puis sur *Edit configuration*.
@@ -11,6 +15,8 @@
 7. Validez
 
 Vous devriez normalement vous retrouver avec ceci :
+
+<br><br><br><br>
 
 <center>
 ![toolbox](/resources/tp1/webstorm-003.png)
@@ -57,6 +63,8 @@ Quand un de vos point d'arrêt est atteind par le programme, l'éditeur vous le 
 
 Comme vous pouvez le voir, l'éditeur vous met en surimpression les valeurs des variables.
 
+<br>
+
 ## Profiling V8
 
 Si vous voulez essayer d'optimiser la gestion mémoire, trouver un quelconque goulot d'étranglement ou bien de savoir comment Node.JS gère l'exécution de votre programme, vous pouvez effectuer un profiling de votre projet.
@@ -102,6 +110,8 @@ Ensuite, il faut savoir que vous devrez avoir des fichiers de configuration d'es
 
 - `.eslintignore` : Liste des fichiers et dossiers à ignorer.
 - `.eslintrc.json` : Configuration esLint.
+
+<br><br>
 
 Voici le contenu du fichier `.eslintignore` :
 
