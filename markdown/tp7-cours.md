@@ -54,7 +54,7 @@ En faisant ça, si jamais votre tâche est déjà en cours d'exécution, elle se
     - `global` : obvious.
 4. Boutons de contrôles.
 
-Quand un de vos point d'arrêt est atteind par le programme, l'éditeur vous le met en évidence comme ceci :
+Quand un de vos point d'arrêt est atteint par le programme, l'éditeur vous le met en évidence comme ceci :
 
 <center>
 ![debug](../resources/tp7/debug_editor_001.png)
