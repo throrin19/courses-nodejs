@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Socket.io est une implémentation du protocole websocker au sein de node.JS.
+Socket.io est une implémentation du protocole websocket au sein de node.JS.
 Comparé à une connexion HTTP standard, le protocole websocket effectue qu'une seule connexion entre le client et le serveur.
 Par la suite, les messages transitent grâce à des channels et des événements.
 
@@ -32,7 +32,7 @@ Maintenant, nous allons partir vers une approche dite de microServices. Nous all
     v            |
 +----------------+--+
 |Serveur des emails |
-|(ser^eur socket)   |
+|(serveur socket)   |
 +-------------------+
 ```
 
@@ -81,7 +81,7 @@ if (io) {
     io.sockets.emit('global-result');
 }
 ```
-+ Via lun emit sur une room (seul les inscrits à cette room y ont accès) :
++ Via un emit sur une room (seul les inscrits à cette room y ont accès) :
 ```javascript
 let io = request.plugins['hapi-io'].io;
 if (io) {
@@ -149,3 +149,9 @@ server.ioClient.emit('get-user', 1, (user) => {
     console.log(user);
 });
 ```
+
+## Consignes fin de module
+
+Pour rappel, les deux projets que vous devrez avoir à la fin (le serveur hapi pour les utilisateurs et le serveur hapi pour l'envoi de mails) doivent être impérativement rendus **avant le 24 février au soir**. Pour des raisons de simplicités et pour pouvoir vous donner facilement une correction à chacun, vous devrez envoyer **les liens de vos projets GIT** à benjamin.besse.aff@unilim.fr.
+
+La note prendra en compte le bon fonctionnement des projets, que le fichier `package.json` soit bien rempli pour que le lancement de vos projets sur un autre poste que le votre se fasse sans encombre, que la partie hapi soit bien configurée et que la qualité du code soit au rendez-vous.
