@@ -1,5 +1,9 @@
 # TP 8 : Socket.io et plugins
 
+<center>
+![tp8](../resources/tp8.jpg)
+</center>
+
 ## Introduction
 
 Socket.io est une implémentation du protocole websocket au sein de node.JS.
@@ -54,8 +58,8 @@ server.route([
           'hapi-io': 'get-user'
         }
       },
-      handler: function(request, reply) {
-        db.users.get(request.params.id, function(err, user) {
+      handler(request, reply) {
+        db.users.get(request.params.id, (err, user) => {
           reply(err, user);
         });
       }
@@ -92,6 +96,10 @@ if (io) {
 ```javascript
 reply(null, { msg : 'ok' });
 ```
+
+<br>
+<br>
+<br>
 
 ## Client Socket.io
 
@@ -153,5 +161,7 @@ server.ioClient.emit('get-user', 1, (user) => {
 ## Consignes fin de module
 
 Pour rappel, les deux projets que vous devrez avoir à la fin (le serveur hapi pour les utilisateurs et le serveur hapi pour l'envoi de mails) doivent être impérativement rendus **avant le 24 février au soir**. Pour des raisons de simplicités et pour pouvoir vous donner facilement une correction à chacun, vous devrez envoyer **les liens de vos projets GIT** à benjamin.besse.aff@unilim.fr.
+
+<br>
 
 La note prendra en compte le bon fonctionnement des projets, que le fichier `package.json` soit bien rempli pour que le lancement de vos projets sur un autre poste que le votre se fasse sans encombre, que la partie hapi soit bien configurée et que la qualité du code soit au rendez-vous.
