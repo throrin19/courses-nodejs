@@ -9,8 +9,7 @@
 2. Utilisations
 3. Gestionnaire de paquet et package.json
 4. EventLoop
-5. Versions de Node.JS
-6. Plan de travail
+5. Plan de travail
 
 ---
 # Qu'est-ce que Node.JS
@@ -28,6 +27,25 @@
 
 - Versions standards et LTS
 	![version](https://github.com/nodejs/LTS/raw/master/schedule.png)
+    
+---
+### Qu'est-ce que Node.js
+
+| Release   |  LTS Status     | Active LTS Start  | Maintenance End   |
+|   :--:    |    :---:        |   :---:           |       :---:       |
+|  v0.12.x  |**End-of-Life**  |        -          |    2016-04-01     |  
+| 4.x       |**Maintenance**  |    2015-10-01     |    April 2018     |
+|  5.x      |No LTS           |                   |                   |
+| 6.x       |**Active**       |    2016-10-18     |   April 2019      |
+|  7.x      |No LTS           |                   |                   |
+|  8.x      |**Pending**      |    2017-10-31     |   December 2019   |
+
+---
+### Qu'est-ce que Node.js
+
+- Deux types de version :
+	- LTS : Support éttendu : Ce sont les versions les plus stables
+	- Les autres : versions dites "beta" (test de nouvelles fonctionnalités, ...)
     
 ---
 # Qu'est-ce que Node.JS
@@ -224,30 +242,6 @@ a.forEach((value) => {
 console.log('after forEach');
 ```
 - Les fonctions des types de base (String, Object, Array, ...) sont toujours synchrones.
-
----
-# Versions de Node.JS
-
-![version](https://github.com/nodejs/Release/raw/master/schedule.png)
-
----
-### Versions de Node.JS
-
-| Release   |  LTS Status     | Active LTS Start  | Maintenance End   |
-|   :--:    |    :---:        |   :---:           |       :---:       |
-|  v0.12.x  |**End-of-Life**  |        -          |    2016-04-01     |  
-| 4.x       |**Maintenance**  |    2015-10-01     |    April 2018     |
-|  5.x      |No LTS           |                   |                   |
-| 6.x       |**Active**       |    2016-10-18     |   April 2019      |
-|  7.x      |No LTS           |                   |                   |
-|  8.x      |**Pending**      |    2017-10-31     |   December 2019   |
-
----
-### Versions de Node.JS
-
-- Deux types de version :
-	- LTS : Support éttendu : Ce sont les versions les plus stables
-	- Les autres : versions dites "beta" (test de nouvelles fonctionnalités, ...)
 
 ---
 # Plan de travail
