@@ -27,7 +27,7 @@
 
 - Versions standards et LTS
 	![version](https://github.com/nodejs/LTS/raw/master/schedule.png)
-    
+
 ---
 ### Qu'est-ce que Node.js
 
@@ -46,7 +46,7 @@
 - Deux types de version :
 	- LTS : Support éttendu : Ce sont les versions les plus stables
 	- Les autres : versions dites "beta" (test de nouvelles fonctionnalités, ...)
-    
+
 ---
 # Qu'est-ce que Node.JS
 
@@ -143,7 +143,7 @@ npx eslint
 - **private** : Si à `true`, le projet ne sera jamais publié sur npm si vous lancez `npm publish` par mégarde
 
 ---
-#### EventLoop 
+#### EventLoop
 
 ```
    ┌───────────────────────┐
@@ -167,7 +167,7 @@ npx eslint
 ```
 ---
 # EventLoop (détails)
-   
+
    - **timers** : lance les callbacks programmés par `setTimeout` et `setIntervale`
    - **I/O callbacks** : lance tous les autres callbacks
    - **idle, prepare** : utilisé par le coeur de Node.JS
@@ -179,7 +179,7 @@ npx eslint
 # EventLoop (détails)
 
 - Permet l'asynchrone
-- Possibilité de forcer l'exécution au prochain passage avec `process.nextTick()` 
+- Possibilité de forcer l'exécution au prochain passage avec `process.nextTick()`
 - Fonctions avec callback pas toujours asynchrones selon ce qu'elles font
 - Promesses toujours Asynchrones
 
