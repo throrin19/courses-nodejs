@@ -171,7 +171,7 @@ npx eslint
    - **timers** : lance les callbacks programmés par `setTimeout` et `setIntervale`
    - **I/O callbacks** : lance tous les autres callbacks
    - **idle, prepare** : utilisé par le coeur de Node.JS
-   - **poll** : Créer de nouveauc événements d'entrée/sortie. Le cas échéant, peut bloquer l'exécution du script.
+   - **poll** : Créer de nouveaux événements d'entrée/sortie. Le cas échéant, peut bloquer l'exécution du script.
    - **check** : invoque les callbacks de `setImmediate`
    - **close callbacks** : `socket.on('close')`, ...
 
@@ -244,4 +244,51 @@ console.log('after forEach');
 - Les fonctions des types de base (String, Object, Array, ...) sont toujours synchrones.
 
 ---
+# Les événements
+
+- Utilisés au travers de la classe `EventEmitter`
+	```javascript
+    const EventEmitter = require('events').EventEmitter;
+    const myEventNamespace = new EventEmitter();
+    ```
+- Callbacks effectués à des moments précis
+- Appels via `event.emit('eventName', ...params)`
+- Interceptés via `event.on('eventName', callbackFunc)`
+
+---
+# Socket.io
+
+- Websocket : connexion "permanente"
+- Communication client/serveur via les événements
+- Aucun timeout
+- L'événement appelé peut avoir un callback
+	```javascript
+    socket.emit('myeventWithCallback', (result) => { });
+    ```
+- Gestion de Rooms
+- Permet l'envoi d'events en broadcast
+---
+# Mise en production
+
+- Serveurs Web :
+	- PM2 : Permet de lancer le serveur comme un service et de le relancer automatiquement
+	- Docker : via un système d'orchestration (Rancher, ...)
+- Module :
+	- NPM et Yarn
+- Scripts :
+	- Services functions (AWS lambda, ...)    
+---
+# Plan de travail : Outils
+
+- Utilisation de NVM avec la dernière version LTS de Node.JS en date (8.X)
+- Utilisation d'Atom avec les modules qui vont bien
+- Repository Git pour le suivi du projet
+- TD et TP séparés en 2 parties :
+	- Apprentissage via nodeschool.io
+	- Mise en pratique
+
+---
 # Plan de travail
+
+- TD : Introduction
+- TP1 : GIT et NPM
