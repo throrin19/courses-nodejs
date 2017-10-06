@@ -263,8 +263,8 @@ console.log('after forEach');
 - Aucun timeout
 - L'événement appelé peut avoir un callback
 	```javascript
-    socket.emit('myeventWithCallback', (result) => { });
-    ```
+  socket.emit('myeventWithCallback', (result) => { });
+  ```
 - Gestion de Rooms
 - Permet l'envoi d'events en broadcast
 ---
@@ -292,3 +292,4 @@ console.log('after forEach');
 
 - TD : Introduction
 - TP1 : GIT et NPM
+- TP2 : Styleguides pour avoir un projet lisible
