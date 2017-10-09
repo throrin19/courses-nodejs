@@ -76,34 +76,75 @@ Nous allons commencer ce TP avec la réalisation des *tutoriels* suivants :
 
 Tous ces tutoriels vous serviront à comprendre le fonctionnement fondamental de javascript et de Node.JS ,et , bien entendu, ils sont nécessaires pour la suite du module.
 
-## Atom
+## Webstorm
 
-Atom est un éditeur développé par gitHub et tournant sous Electron. Ce qui veut dire qu'il tourne grâce à NodeJS. Quoi de plus normal de développer du NodeJS sur un éditeur codé avec la même chose ?
-Vous trouverez l'installateur d'Atom à cette adresse : https://atom.io/
+Webstorm est l'un des IDE fournit par Jetbrains. Bien entendu, vu la base qu'ont tous les éditeurs de Jetbrains, cette partie marchera aussi, dans les grandes lignes, pour PHPstorm, Pycharm, ...
 
-### Plugins de base
+### Installation
 
-De base, Atom est assez sommaire et aussi basique que gEdit. Afin de l'enrichir, vous devrez installer des modules complémentaires. Nous allons installer tous ceux qu'il vous faut afin d'avoir un environnement au poil.
+Pour l'installation/lancement de Webstorm, je vous conseille de passer par le logiciel JetBrains toolbox permettant de facilement accéder à un projet particulier mais aussi de gérer l'installation/maj/lancement de tous les éditeurs que Jetbrains fournit.
 
-Pour celà allez dans les préférences (`CTRL` + `,`) puis dans la rubrique `install` et installez les packages suivants :
+Vous trouverez la toolbox via le lien suivant :
 
-- advanced-open-file
-- atom-ide-ui
-- auto-update-plus
-- autocomplete-modules
-- emmet@2.4.3
-- file-icons
-- git-plus
-- git-time-machine
-- ide-json
-- ide-typescript
-- linter-eslint
-- linter-npm-missing
-- open-recent
-- platformio-ide-terminal
+```
+https://www.jetbrains.com/toolbox/app/
+```
 
-Normalement après ceci vous devriez avoir tout de fonctionnel pour les TPs à venir.
+**Attention** : Selon votre système d'exploitation, l'installation de la toolbox n'est pas du tout la même partout. Je pars du principe que vous savez installer une application sous Windows, Linux, macOS sans aucun problème.
 
+<center>
+![hackerman](/resources/hackerman.tb.jpg)
+<br>
+<br>
+</center>
+
+Ensuite quand vous lancez la toolbox, voud devriez avoir cette fenêtre :
+
+<center>
+![toolbox](/resources/tp1/toolbox-001.png)
+<br>
+<br>
+</center>
+
+Vous n'avez plus qu'à installer le(s) éditeur(s) de votre choix. Dans notre cas : **Webstorm**.
+
+### Utilisation
+
+Pour l'utilisation de webstorm, dans le cadre du projet du TP, je vous conseille de commencer par un *empty project* :
+
+<center>
+![toolbox](/resources/tp1/webstorm-001.png)
+<br>
+<br>
+</center>
+
+Et là, vous devriez arriver sur la fenêtre suivante :
+
+<center>
+![toolbox](/resources/tp1/webstorm-002.png)
+<br>
+<br>
+</center>
+
+1. Barre de contrôle pour créer un fichier, accéder aux settings, ...
+2. Fenêtre d'exploration du projet.
+3. Barre de lancement de votre application et de debug.
+4. Barre d'accès aux différents outils (terminal, VCS, ...)
+5. Fenêtre d'édition
+
+### Réglages de base pour un projet NodeJS :
+
+1. Allez dans les Settings (**File => Default Settings...**)
+2. Allez dans l'onglet **Languages and Frameworks => Javascript**.
+3. Passez *Javascript language version* à **ECMAScript 6**.
+4. Cochez **Prefer Strict Mode**
+5. Allez dans **Languages and Frameworks => Node.JS and NPM**.
+6. Choisissez le binaire de node v6.9.1 qui devrait être dans `~/.nvm/versions/node/v6.9.1/bin/node`
+7. Activez l'assistance du code de Node.JS
+8. Appliquez les changements
+9. Vous devrez faire la même chose exceptionnellement pour le projet en cours via **File => Settings**.
+
+Normalement après ces réglages par défaut, tous vos projets devraient prendre en compte ES6 et nodeJS 6.9.1
 
 ### Lancement de son application
 
