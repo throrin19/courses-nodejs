@@ -1,4 +1,4 @@
-# TP 1 : Introduction
+# TD : Introduction
 
 <center>
 ![yknjs](/resources/yknjs.jpg)
