@@ -1,4 +1,4 @@
-# TP 7 : Analyse, Debug et
+# TP 1 : Analyse, Debug et Eslint
 
 <center>
 ![meme](/resources/bug.jpg)

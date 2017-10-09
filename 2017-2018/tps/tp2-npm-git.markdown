@@ -1,7 +1,7 @@
 # TP2 : GIT et NPM
 
 <center>
-![git](../resources/git_001.jpg)
+![git](/resources/git_001.jpg)
 <br>
 <br>
 </center>
@@ -82,5 +82,5 @@ Le nom du package sera `iut-encrypt`.
 Vous devrez pouvoir encoder un mot de passe en sha1 mais pensez votre module comme évolutif pour pouvoir rajouter d'autres méthodes dans le futur.
 
 <center>
-![npm](../resources/node_modules.jpg)
+![npm](/resources/node_modules.jpg)
 </center>

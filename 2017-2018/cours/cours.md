@@ -291,5 +291,5 @@ console.log('after forEach');
 # Plan de travail
 
 - TD : Introduction
-- TP1 : GIT et NPM
-- TP2 : Styleguides pour avoir un projet lisible
+- TP1 : Analyse, Debug et Eslint
+- TP2 : GIT et NPM
