@@ -1,6 +1,6 @@
 <!-- $theme: gaia -->
 
-# Node.JS
+![nodejs](../../resources/nodejs.png)
 
 ---
 # Sommaire
@@ -267,6 +267,7 @@ console.log('after forEach');
   ```
 - Gestion de Rooms
 - Permet l'envoi d'events en broadcast
+
 ---
 # Mise en production
 
@@ -277,6 +278,7 @@ console.log('after forEach');
 	- NPM et Yarn
 - Scripts :
 	- Services functions (AWS lambda, ...)    
+	
 ---
 # Plan de travail : Outils
 
@@ -293,3 +295,19 @@ console.log('after forEach');
 - TD : Introduction
 - TP1 : Analyse, Debug et Eslint
 - TP2 : GIT et NPM
+- TP3 : Hapi
+- TP4 : Hapi : Swagger et Joi
+- TP5 : Mongoose et migrations
+- TP6 : Socket.io
+- TP7 : Microservice d'envoie d'email
+
+---
+# Plan de travail
+
+- Objectif :
+	- Comprendre Node.JS	
+	- Comprendre Socket.io 
+	- Utiliser Hapi.JS
+	- Sait faire une API REST
+	- Interragir avec MongoDB
+	- Approche microService
