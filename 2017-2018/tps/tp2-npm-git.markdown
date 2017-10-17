@@ -75,11 +75,13 @@ Pour vérifier tout ceci, je vous invite à jeter un oeil à cet article chez NP
 
 Réalisation d'un module de cryptage de mots de passe permettant de simplifier les appels du module `encrypt` fourni par Node.JS.
 
-Vous devrez créer le projet sur github afin de le publier ensuite au sein de NPM via un scope qui devra être les 2 première lettres du nom/prénom de chaque personne de votre binôme.
+Vous devrez créer le projet sur github afin de le publier ensuite au sein de NPM via un scope. Le scope permet de créer des packages NPM dits "privés". Cela vous permet de créer des packages NPM du nom d'un package existant mais préfixé par votre login de la forme `@loginNPM/packageName`.
 
-Le nom du package sera `iut-encrypt`.
+Le nom du package sera donc `@votreloginNPM/iut-encrypt`.
 
 Vous devrez pouvoir encoder un mot de passe en sha1 mais pensez votre module comme évolutif pour pouvoir rajouter d'autres méthodes dans le futur.
+
+**Attention** : Ce package servira dans un prochain TP afin de voir comment l'utiliser dans votre projet.
 
 <center>
 ![npm](/resources/node_modules.jpg)

@@ -8,9 +8,9 @@
 
 1. Dans la barre de lancement de votre application, cliquez sur la flèche descendante puis sur *Edit configuration*.
 2. Cliquez sur l'icône **+** puis sur **Node.js**
-3. Dans la ligne *Node Interpreter*, vérifiez que vous êtes bien sur la v6.9.1 sinon mettre le bon chemin (`~/.nvm/versions/node/v6.9.1/bin/node`)
+3. Dans la ligne *Node Interpreter*, vérifiez que vous êtes bien sur la v6.9.1 sinon mettre le bon chemin (`~/.nvm/versions/node/v8.6.0/bin/node`)
 4. Dans *Working directory*, ciblez votre projet
-5. Dans *Javascript File*, mettez bien `server.js`.
+5. Dans *Javascript File*, mettez bien le fichier d'entrée de votre projet.
 6. Mettez le nom que vous voulez dans *Name*.
 7. Validez
 
@@ -110,27 +110,15 @@ Ensuite, il faut savoir que vous devrez avoir des fichiers de configuration d'es
 Voici le contenu du fichier `.eslintignore` :
 
 ```
-# ignore le path de build de Backbone.js
-dist/
-
 # ignore les modules node
 node_modules
-
-# nyc output
-.nyc_output
 ```
 
 Et voici le contenu de base de `.eslintrc.json`
 
 ```
 {
-    "env": {
-        "es6": true,
-        "node": true,
-        "mocha": true,
-        "mongo": true
-    },
-    "extends": "airbnb"
+    "extends" : "throrinstudio"
 }
 ```
 
@@ -142,9 +130,3 @@ Pour finir, vous devrez, dans les paramètres de webstorm, activer esLint pour q
 ![debug](/resources/tp7/eslint.png)
 <br><br>
 </center>
-
-## Pour conclure
-
-Vous avez vu brièvement comment s'aider des différents outils à dispositions pour déceler rapidement un bug, memory leak, ... et comment produire un code de qualité et lisible par tous.
-
-Il reste encore beaucoup de choses à dire pour cette partie et de nouveaux outils sortent tous les jours ou presque dans ce domaine.
