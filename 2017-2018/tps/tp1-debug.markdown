@@ -1,7 +1,7 @@
 # TP 1 : Analyse, Debug et Eslint
 
 <center>
-![meme](/resources/bug.jpg)
+![meme](../../resources/bug.jpg)
 </center>
 
 ## Lancement de son application
@@ -16,10 +16,8 @@
 
 Vous devriez normalement vous retrouver avec ceci :
 
-<br><br><br><br>
-
 <center>
-![toolbox](/resources/tp1/webstorm-003.png)
+![toolbox](../../resources/tp1/webstorm-003.png)
 <br>
 <br>
 </center>
@@ -27,7 +25,8 @@ Vous devriez normalement vous retrouver avec ceci :
 + Le bouton *play* représenté par la flèche verte sert à lancer l'application normalement.
 + Le bouton *Debug* représenté par l'insect vert permet de lancer l'application en mode Debug.
 
-Vous devriez voir une fenêtre s'ouvrir avec la phrase "Server running at http://127.0.0.1:8000/" ainsi que tout le dialogue propre aux routes de hapiJS.
+<br>
+<br>
 
 
 ## Mode Debug
@@ -37,7 +36,7 @@ Comme vu plus haut, vous pouvez simplement lancer votre tâche en mode Debug en 
 En faisant ça, si jamais votre tâche est déjà en cours d'exécution, elle sera relancée en mode debug. Et, normalement, vous devriez avoir le panneau suivant de disponible :
 
 <center>
-![panel](/resources/tp7/debug_panel_001.png)
+![panel](../../resources/tp7/debug_panel_001.png)
 <br><br>
 </center>
 
@@ -57,7 +56,7 @@ En faisant ça, si jamais votre tâche est déjà en cours d'exécution, elle se
 Quand un de vos point d'arrêt est atteint par le programme, l'éditeur vous le met en évidence comme ceci :
 
 <center>
-![debug](/resources/tp7/debug_editor_001.png)
+![debug](../../resources/tp7/debug_editor_001.png)
 <br><br>
 </center>
 
@@ -78,7 +77,7 @@ npm install -g v8-profiler
 Ensuite, dans la fenêtre de configuration du lancement/debug, vous devrez aller dans l'onglet `v8 profiling` et le remplir de la façon suivante :
 
 <center>
-![debug](/resources/tp7/v8_profiling.png)
+![debug](../../resources/tp7/v8_profiling.png)
 <br><br>
 </center>
 
@@ -105,8 +104,6 @@ Ensuite, il faut savoir que vous devrez avoir des fichiers de configuration d'es
 - `.eslintignore` : Liste des fichiers et dossiers à ignorer.
 - `.eslintrc.json` : Configuration esLint.
 
-<br><br>
-
 Voici le contenu du fichier `.eslintignore` :
 
 ```
@@ -117,9 +114,7 @@ node_modules
 Et voici le contenu de base de `.eslintrc.json`
 
 ```
-{
-    "extends" : "throrinstudio"
-}
+{ "extends" : "throrinstudio" }
 ```
 
 Pour toutes les informations complémentaires ou pour ajouter/modifier des règles, vous trouverez votre bonheur ici : http://eslint.org/
@@ -127,6 +122,6 @@ Pour toutes les informations complémentaires ou pour ajouter/modifier des règl
 Pour finir, vous devrez, dans les paramètres de webstorm, activer esLint pour que vous soyez notifier, lors de l'édition, de ces erreurs comme mis dans la capture suivante :
 
 <center>
-![debug](/resources/tp7/eslint.png)
+![debug](../../resources/tp7/eslint.png)
 <br><br>
 </center>

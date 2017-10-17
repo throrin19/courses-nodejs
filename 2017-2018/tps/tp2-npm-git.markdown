@@ -1,7 +1,7 @@
 # TP2 : GIT et NPM
 
 <center>
-![git](/resources/git_001.jpg)
+![git](../../resources/git_001.jpg)
 <br>
 <br>
 </center>
@@ -17,6 +17,8 @@ Ensuite, je vous invite à réaliser le tutoriel nodeschool.io suivant :
 - `git-it`
 
 La partie Git est très importante pour les différentes libraries Node.JS disponibles sur NPM. En effet, elles sont toutes disponibles sur un repository Git (privé ou public). De plus, cela servira pour la suite du TP.
+
+<br><br><br><br><br>
 
 ## NPM
 
@@ -44,8 +46,6 @@ npm install @organisation/monpackage
 
 Le fichier `package.json` de notre projet ressence toutes les libraries externes de notre projet, les différentes commandes disponibles via `npm` et pleins d'autres informations propres au build, publication, ...
 
-&nbsp;
-
 Nous allons nous concentrer ici sur les champs `devDependencies`, `dependencies` et `peerDependencies`.
 
 - `dependencies` : Ce sont les dépendances principales de votre module. Elles permettent à celui-ci de fonctionner correctement en production lorsqu'il est compilé (si besoin).
@@ -62,16 +62,9 @@ Au contraire `"async" : "^0.4.0"` peut vous installer async entre la version `0.
 
 Pour vérifier tout ceci, je vous invite à jeter un oeil à cet article chez NPM : https://docs.npmjs.com/misc/semver
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-
 ### Réalisation de notre premier module
+
+**Attention** : Ce package servira dans un prochain TP afin de voir comment l'utiliser dans votre projet.
 
 Réalisation d'un module de cryptage de mots de passe permettant de simplifier les appels du module `encrypt` fourni par Node.JS.
 
@@ -80,9 +73,3 @@ Vous devrez créer le projet sur github afin de le publier ensuite au sein de NP
 Le nom du package sera donc `@votreloginNPM/iut-encrypt`.
 
 Vous devrez pouvoir encoder un mot de passe en sha1 mais pensez votre module comme évolutif pour pouvoir rajouter d'autres méthodes dans le futur.
-
-**Attention** : Ce package servira dans un prochain TP afin de voir comment l'utiliser dans votre projet.
-
-<center>
-![npm](/resources/node_modules.jpg)
-</center>
