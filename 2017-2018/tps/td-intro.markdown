@@ -1,7 +1,7 @@
 # TD : Introduction
 
 <center>
-![yknjs](/resources/yknjs.jpg)
+![yknjs](../../resources/yknjs.jpg)
 <br>
 <br>
 </center>
@@ -18,6 +18,9 @@ Ce TD réalise les objectifs suivants :
 - Revue des bases de Javascripts et des normes ES6
 - Installation de l'environnement de développement
 - Utilisation du debugger
+
+<br>
+<br>
 
 ## Installation de NVM
 
@@ -54,10 +57,12 @@ Et pour le lancer, vous aurez juste la commande suivante à taper :
 <votremodule>
 ```
 
+<br>
+
 Normalement vous devriez arriver sur un écran de ce genre :
 
 <center>
-![nodeschool-001](/resources/tp1/nodeschool-001.png)
+![nodeschool-001](../../resources/tp1/nodeschool-001.png)
 <br>
 <br>
 </center>
@@ -76,44 +81,35 @@ Nous allons commencer ce TP avec la réalisation des *tutoriels* suivants :
 
 Tous ces tutoriels vous serviront à comprendre le fonctionnement fondamental de javascript et de Node.JS ,et , bien entendu, ils sont nécessaires pour la suite du module.
 
+<br>
+
 ## Webstorm
 
 Webstorm est l'un des IDE fournit par Jetbrains. Bien entendu, vu la base qu'ont tous les éditeurs de Jetbrains, cette partie marchera aussi, dans les grandes lignes, pour PHPstorm, Pycharm, ...
 
 ### Installation
 
-Pour l'installation/lancement de Webstorm, je vous conseille de passer par le logiciel JetBrains toolbox permettant de facilement accéder à un projet particulier mais aussi de gérer l'installation/maj/lancement de tous les éditeurs que Jetbrains fournit.
-
-Vous trouverez la toolbox via le lien suivant :
-
-```
-https://www.jetbrains.com/toolbox/app/
-```
-
-**Attention** : Selon votre système d'exploitation, l'installation de la toolbox n'est pas du tout la même partout. Je pars du principe que vous savez installer une application sous Windows, Linux, macOS sans aucun problème.
-
-<center>
-![hackerman](/resources/hackerman.tb.jpg)
-<br>
-<br>
-</center>
+Pour l'installation/lancement de Webstorm, je vous conseille de passer par le logiciel JetBrains toolbox permettant de facilement accéder à un projet particulier mais aussi de gérer l'installation/maj/lancement de tous les éditeurs que Jetbrains fournit. Vous trouverez la toolbox via le lien suivant : [https://www.jetbrains.com/toolbox/app/](https://www.jetbrains.com/toolbox/app/)
 
 Ensuite quand vous lancez la toolbox, voud devriez avoir cette fenêtre :
 
 <center>
-![toolbox](/resources/tp1/toolbox-001.png)
-<br>
-<br>
+![toolbox](../../resources/tp1/toolbox-001.png)
 </center>
 
 Vous n'avez plus qu'à installer le(s) éditeur(s) de votre choix. Dans notre cas : **Webstorm**.
+
+<br>
+<br>
+<br>
+<br>
 
 ### Utilisation
 
 Pour l'utilisation de webstorm, dans le cadre du projet du TP, je vous conseille de commencer par un *empty project* :
 
 <center>
-![toolbox](/resources/tp1/webstorm-001.png)
+![toolbox](../../resources/tp1/webstorm-001.png)
 <br>
 <br>
 </center>
@@ -121,7 +117,7 @@ Pour l'utilisation de webstorm, dans le cadre du projet du TP, je vous conseille
 Et là, vous devriez arriver sur la fenêtre suivante :
 
 <center>
-![toolbox](/resources/tp1/webstorm-002.png)
+![toolbox](../../resources/tp1/webstorm-002.png)
 <br>
 <br>
 </center>
@@ -165,6 +161,9 @@ server.listen(8000);
 console.log("Server running at http://127.0.0.1:8000/");
 ```
 
+<br>
+<br>
+
 1. Dans la barre de lancement de votre application, cliquez sur la flèche descendante puis sur *Edit configuration*.
 2. Cliquez sur l'icône **+** puis sur **Node.js**
 3. Dans la ligne *Node Interpreter*, vérifiez que vous êtes bien sur la v6.9.1 sinon mettre le bon chemin (`~/.nvm/versions/node/v6.9.1/bin/node`)
@@ -176,7 +175,7 @@ console.log("Server running at http://127.0.0.1:8000/");
 Vous devriez normalement vous retrouver avec ceci :
 
 <center>
-![toolbox](/resources/tp1/webstorm-003.png)
+![toolbox](../../resources/tp1/webstorm-003.png)
 <br>
 <br>
 </center>
