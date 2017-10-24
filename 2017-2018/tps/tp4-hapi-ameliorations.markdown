@@ -42,18 +42,6 @@ Afin de mettre en place Swagger, vous devez savoir qu'un plugin hapi est disponi
 
 Votre travail est d'intégrer ce module à votre projet Hapi de base (basé sur le boilerplate fournit en tp3) et renseigner l'entrypoint de base dans la documentation swagger.
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
 ## Joi
 
 Comme vous l'avez vu dans `make-me-hapi`, Joi permet de valider des données par rapport à un schéma. Mais Joi peut aussi facilement contrôler dans Hapi les données entrantes au niveau de vos requêtes, que ce soit dans les params GET ou POST et ce directement au niveau de la configuration de vos routes.
@@ -70,15 +58,13 @@ Hapi-boilerplate
     └── schemas         # Schémas Joi
 ```
 
+**Tips** : Vous verrez qu'en intégrant sur vos routes des validations Joi, Swagger va automatiquement remplir ses formulaires en fonction, ce qui vous permettra de tester facilement votre route.
+
 ### Mise en place
 
 Comme vous avez vu dans `make-me-hapi`, vous devrez utiliser le module `joi` au sein de votre projet.
 
 Votre travail est de créer un enpoint pour une gestion d'utilisateurs. (Pour le moment juste une création sur la méthode `POST`) en vous basant sur la structure suivante :
-
-<br>
-<br>
-<br>
 
 ```
 {
@@ -88,25 +74,18 @@ Votre travail est de créer un enpoint pour une gestion d'utilisateurs. (Pour le
     firstname : "Mon prénom requis",
     lastname : "Mon nom",
     company : "Ma société",
-    function : "Ma fonction",
-    nir : "numéro de sécurité social valide"
+    function : "Ma fonction"
 }
 ```
 
 Vous devrez effectuer les tests de validation suivants :
 
 - login : champ requis
-- password : champ requis d'au moins 8 caractères
+- password : champ requis d'au moins 8 caractères.
 - email : champ requis et doit être un format d'email valide
 - firstname : champ requis
 - lastname : champ requis
-- nir : champ non requis mais avec un numéro de sécurité sociale valide
 
-**Tips** : Vous verrez qu'en intégrant sur vos routes des validations Joi, Swagger va automatiquement remplir ses formulaires en fonction, ce qui vous permettra de tester facilement votre route.
-
-Le résultat de cette requête sera l'utilisateur envoyé mais sans les champs suivants :
-
-- password
-- nir
+Le résultat des requêtes de récupération utilisateurs (un ou tous) ne devront pas contenir le champ `password`.
 
 **Tips** : Pour simplifier la suppression des champs, je vous conseille de regarder ce qu'il est possible de faire via le module `lodash`.
