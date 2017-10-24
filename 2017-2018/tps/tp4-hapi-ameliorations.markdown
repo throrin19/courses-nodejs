@@ -5,14 +5,30 @@
 <br><br>
 </center>
 
+## Projets de fin de modules notés
+
+À partir de maintenant, tous les Tps que vous allez faire vont vous permettre de réaliser deux projets complets communiquant ensemble :
+
+- **Service Users** : Service de gestion d'utilisateurs. Ce service sera lié à une base de donnée Mongo et utilisera les normes d'API REST :
+    - Récupération de tous les utilisateurs
+    - Récupération d'un utilisateur donné
+    - Ajout d'un utilisateur
+    - Modification d'un utilisateur
+    - Suppression d'un utilisateur
+    - Génération alléatoire de 100 utilisateurs
+    - Authentification d'un utilisateur
+    - Regénération d'un utilisateur
+    - Utilisation du module créé au TP2 pour la génération du mot de passe
+- **Service Mail** : Relié via socket.io au premier service, il va vous permettre d'envoyer un email aux utilisateurs lors de l'inscription et de l'oubli du mot de passe.
+    - Email de création de l'utilisateur
+    - Email de regénération du mot de passe
+    - Email de modification de l'utilisateur
+
+Pour les deux projets vous devrez respecter les styleguides fournies lors du TP1
+
 ## Avant de commencer
 
 Avant de commencer ce TP, vous devrez terminer le cours nodeschool `make-me-hapi` (mis à part les deux derniers cours qui sont cookies et authentication) et récupérer dans votre repository git le projet `hapi-boilerplate` servant de base à ce TP et au projet fil rouge. (trouvable à cette adresse : https://github.com/throrin19/hapi-boilerplate)
-
-<br>
-<br>
-<br>
-<br>
 
 ## Swagger
 
