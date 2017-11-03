@@ -1,7 +1,7 @@
 # Hapi : Swagger et Joi
 
 <center>
-![swagger](/resources/swagger.jpg)
+![swagger](../../resources/swagger.jpg)
 <br><br>
 </center>
 
@@ -23,6 +23,7 @@
     - Email de création de l'utilisateur
     - Email de regénération du mot de passe
     - Email de modification de l'utilisateur
+- **Bonus** : Migrer Hapi de la v16 à la v17
 
 Pour les deux projets vous devrez respecter les styleguides fournies lors du TP1
 
