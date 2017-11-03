@@ -98,7 +98,7 @@ Le résultat des requêtes de récupération utilisateurs (un ou tous) ne devron
 
 ### Organisation
 
-- Essayez de toujours utiliser les promesses pour vos fonctions. Ceci vous permettra de facilement capturer une erreur que vous n'avez pas gérer sans faire planter le serveur.
+- Essayez de toujours utiliser les promesses pour vos fonctions. Ceci vous permettra de facilement capturer une erreur que vous n'avez pas géré sans faire planter le serveur.
 - Les handlers ne doivent servir qu'à appeler différents plugins pour réaliser la tâche demandée. Le squelette des plugins que je vous conseille est le suivant :
 
 ```

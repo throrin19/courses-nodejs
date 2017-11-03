@@ -14,7 +14,7 @@ Avant de rentrer plus en détail avec un *boilerplate* tout prêt pour la suite 
 - Si vous n'avez pas eu le temps de le faire lors du TP1, je vous recommande vivement de faire `learnyounode` pour bien comprendre le fonctionnement de base de NodeJS et du module Http.
 - `makemehapi`
 
-> Il se peut que des différences entre make-me-hapi et votre utilisation finale de Hapi diffent. En effet, il se trouve que peu après la rédaction de ce TP, la version 17 de hapiJS sort sous peu (ou bien est déjà sortie) et elle change beaucoup de choses. Vous trouverez la liste des changements ainsi que comment modifier votre code ici : [Migration guide v17](https://futurestud.io/tutorials/hapi-v17-upgrade-guide-your-move-to-async-await)
+> Il se peut que des différences entre make-me-hapi et votre utilisation finale de Hapi diffent. En effet, il  se trouve que  peu après la rédaction de ce TP, la version 17 de HapiJS sort sous peu (ou bien soit déjà sortie) et elle change beaucoup de choses. Vous trouverez la liste des changements ainsi que comment modifier votre code ici : [Migration guide v17](https://futurestud.io/tutorials/hapi-v17-upgrade-guide-your-move-to-async-await)
 >
 > Je vous conseille donc vivement de rester avec hapi en v16 pour ce TP et, si le coeur vous en dit, de migrer en v17 par vos propres moyens
 

@@ -6,7 +6,7 @@
 <br>
 </center>
 
-Mongoose est une surcouche à MongoDB pour Node.JS permettant de valider ses données par rapport à des schémas préalablement définits.
+Mongoose est une surcouche à MongoDB pour Node.JS permettant de valider ses données par rapport à des schémas préalablement définis.
 
 Afin d'utiliser convenablement mongoose au sein d'Hapi et de pouvoir gérer facilement les connexions, nous allons passer par les modules `k7` et `k7-mongoose`. Si vous regardez bien `k7`, il s'agit en fait d'un client permettant de gérer de manière transparente, à la configuration, différents moteurs de base de donnée et d'en changer quand bon vous semble (à la manière de PDO en PHP).
 
@@ -83,11 +83,11 @@ Par exemple, pour une API REST sur les utilisateurs vous aurez les requêtes ent
 
 Pour les retours, aidez vous de Hapi-boom et de hapi-boom-decorator en cas d'erreur, il vous les formatera comme il faut.
 
-En ce qui concerne les codes de retour HTTP, enb cas de succès vous aurez les codes suivants :
+En ce qui concerne les codes de retour HTTP, en cas de succès vous aurez les codes suivants :
 
-- **200** : Requête effectuée avec succès. Utilisée que pour des requêtes de récupération d'informations.
+- **200** : Requête effectuée avec succès. Utilisé que pour des requêtes de récupération d'informations.
 - **201** : Contenu créé avec succès. Utilisé lors de la sauvegarde ou la modification d'une donnée sur le serveur.
-- **204** : Aucun contenu de retourné. Ce status est utilisé pour les requêtes `DELETE` si elles se sont passées avec succès.
+- **204** : Aucun contenu de retourné. Ce statut est utilisé pour les requêtes `DELETE` si elles se sont passées avec succès.
 
 ## Récapitulatif des avancées du projet
 
@@ -100,7 +100,7 @@ En ce qui concerne les codes de retour HTTP, enb cas de succès vous aurez les c
 - Les fonctions de Handler entrantes (celles appelées par les routes) prennent toujours deux paramètres : `request` et `reply`.
 - Vous pouvez récupérer la variable `server` au travers de `request.server` pour, par exemple, accéder à un plugin spécifique.
 - Pour accéder à un model mongoose, vous pouvez de la manière suivante : `server.database.monmodel`.
-- Les models mongoose retourné via la méthode plus haut vous permettent d'utiliser ses fonctions statiques et magiques (find, findAll, findOne, update, insert, ...).
+- Les models mongoose retournés via la méthode plus haut vous permettent d'utiliser ses fonctions statiques et magiques (find, findAll, findOne, update, insert, ...).
 - Si vous voulez créer une instance de votre model, vous devrez faire `let model = new server.database.monmodel()`.
 - Au travers de `json-mongoose` toute fonction du model est promisifiée (vous pouvez faire `model.save().then()`, `mommodel.find().then().catch()`, ...)
-- Si vous obtenez l'erreur `model monmodel.js is incorrect`, commentez tous les `require` non utilisés, que vous utilisez bien `module.exports` (avec un s) et vérifiez que votre schéma soit correct.
+- Si vous obtenez l'erreur `model monmodel.js is incorrect`, commentez tous les `require` non utilisés, vérifiez que vous utilisez bien `module.exports` (avec un s) et vérifiez que votre schéma soit correct.
