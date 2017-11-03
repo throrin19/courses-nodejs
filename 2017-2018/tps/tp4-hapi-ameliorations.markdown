@@ -90,3 +90,41 @@ Vous devrez effectuer les tests de validation suivants :
 Le résultat des requêtes de récupération utilisateurs (un ou tous) ne devront pas contenir le champ `password`.
 
 **Tips** : Pour simplifier la suppression des champs, je vous conseille de regarder ce qu'il est possible de faire via le module `lodash`.
+
+### Organisation
+
+- Essayez de toujours utiliser les promesses pour vos fonctions. Ceci vous permettra de facilement capturer une erreur que vous n'avez pas gérer sans faire planter le serveur.
+- Les handlers ne doivent servir qu'à appeler différents plugins pour réaliser la tâche demandée. Le squelette des plugins que je vous conseille est le suivant :
+
+```
+'use strict';
+
+const Promise   = require('bluebird');
+
+// contient toutes les méthodes privées de votre plugin
+const internals = {};
+
+const externals = {
+    pubFunc() {
+        return new Promise((resolve, reject) => {
+
+        });
+    },
+    register(server, options, next) {
+        internals.server    = server.root;
+        internals.settings  = options;
+
+        // à répéter autant de fois
+        // que vous avez de méthodes publiques
+        server.expose('pubFunc', externals.pubFunc);
+
+        next();
+    },
+};
+
+externals.register.attributes = {
+    name    : 'votrepluginavecunnomunique',
+};
+
+module.exports.register = externals.register;
+```
