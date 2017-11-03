@@ -20,6 +20,8 @@ Pour réaliser ces emails, vous allez utiliser les modules suivants :
 - [`nodemailer`](https://community.nodemailer.com/) : library permetant d'envoyer facilement un ou plusieurs emails au travers de Node.JS
 - [`mailgen`](https://github.com/eladnava/mailgen) : Moteur de templating d'email compatible tout client (ou presque).
 
+<br>
+
 **Attention** : Lors de l'édition de l'utilisateur (route `PUT`), si jamais le mot de passe n'est pas saisit ou bien s'il s'agit du mot de passe crypté, veuillez à ne pas le recrypter sous peine de vous retrouver avec un résultat invalide en base de donnée.
 
 **Attention** : Penser la partie d'envoie d'email (qui devrait être une fonction propre) réutilisable facilement et configurable via ses paramètres d'entrée vu que vous devrez en faire un service hapi indépendant au dernier TP.

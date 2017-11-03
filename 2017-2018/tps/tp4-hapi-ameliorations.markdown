@@ -19,6 +19,9 @@
     - Authentification d'un utilisateur
     - Regénération d'un utilisateur
     - Utilisation du module créé au TP2 pour la génération du mot de passe
+
+<br>
+
 - **Service Mail** : Relié via socket.io au premier service, il va vous permettre d'envoyer un email aux utilisateurs lors de l'inscription et de l'oubli du mot de passe.
     - Email de création de l'utilisateur
     - Email de regénération du mot de passe
@@ -46,6 +49,8 @@ Votre travail est d'intégrer ce module à votre projet Hapi de base (basé sur 
 ## Joi
 
 Comme vous l'avez vu dans `make-me-hapi`, Joi permet de valider des données par rapport à un schéma. Mais Joi peut aussi facilement contrôler dans Hapi les données entrantes au niveau de vos requêtes, que ce soit dans les params GET ou POST et ce directement au niveau de la configuration de vos routes.
+
+<br>
 
 Afin de bien ranger tout ça, nous allons rajouter un répertoire `schemas` dans le répertoire `app` afin de stoquer nos différents schémas Joi (un fichier pour un schéma). Ce qui donne l'architecture suivante :
 

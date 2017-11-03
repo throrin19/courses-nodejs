@@ -12,6 +12,8 @@ Afin d'utiliser convenablement mongoose au sein d'Hapi et de pouvoir gérer faci
 
 Pour intégrer convenablement `k7` au sein de notre projet, nous allons créer le fichier `config/manifest/models.js` suivant :
 
+<br><br><br><br><br><br><br><br><br>
+
 ```
 'use strict';
 
@@ -57,6 +59,8 @@ module.exports = jsonToMongoose({
     // réglages du model
 });
 ```
+
+<br><br><br>
 
 Comme vous pouvez le voir, nous utilisons la library `json-mongoose` permettant de simplifier la création et l'organisation d'un model. Vous trouverez sa documentation ici : https://github.com/Goomeo/json-mongoose. Cette library vous permettra de définir votre schéma de donnée par rapport à un schéma `joi`.
 
