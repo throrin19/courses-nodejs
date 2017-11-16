@@ -298,15 +298,15 @@ console.log('after forEach');
 - TP3 : Hapi
 - TP4 : Hapi : Swagger et Joi
 - TP5 : Mongoose et migrations
-- TP6 : Socket.io
-- TP7 : Microservice d'envoie d'email
+- TP6 : Envoi d'email
+- TP7 : Socket.io et microservice d'email
 
 ---
 # Plan de travail
 
 - Objectif :
 	- Comprendre Node.JS	
-	- Comprendre Socket.io 
+	- Comprendre les websockets
 	- Utiliser Hapi.JS
 	- Sait faire une API REST
 	- Interragir avec MongoDB
