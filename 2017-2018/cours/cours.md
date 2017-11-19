@@ -278,12 +278,12 @@ console.log('after forEach');
 	- NPM et Yarn
 - Scripts :
 	- Services functions (AWS lambda, ...)    
-	
+
 ---
 # Plan de travail : Outils
 
 - Utilisation de NVM avec la dernière version LTS de Node.JS en date (8.X)
-- Utilisation d'Atom avec les modules qui vont bien
+- Utilisation de Webstorm (licences gratuites étudiants)
 - Repository Git pour le suivi du projet
 - TD et TP séparés en 2 parties :
 	- Apprentissage via nodeschool.io
@@ -305,7 +305,7 @@ console.log('after forEach');
 # Plan de travail
 
 - Objectif :
-	- Comprendre Node.JS	
+	- Comprendre Node.JS
 	- Comprendre les websockets
 	- Utiliser Hapi.JS
 	- Sait faire une API REST
