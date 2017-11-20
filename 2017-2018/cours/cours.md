@@ -13,6 +13,8 @@
 
 ---
 # Qu'est-ce que Node.JS
+---
+# Qu'est-ce que Node.JS
 
 - Javascript côté server
 - Moteur V8 de Webkit
@@ -72,6 +74,8 @@ Utilisation
 - serverless (chromeless, ...)
 - ...
 
+---
+# Gestionnaire de paquets
 ---
 # Gestionnaire de paquets
 
@@ -142,6 +146,8 @@ npx eslint
 - **dependencies** : dépendances du projet
 - **private** : Si à `true`, le projet ne sera jamais publié sur npm si vous lancez `npm publish` par mégarde
 
+---
+# EventLoop
 ---
 #### EventLoop
 
@@ -245,6 +251,8 @@ console.log('after forEach');
 
 ---
 # Les événements
+---
+# Les événements
 
 - Utilisés au travers de la classe `EventEmitter`
 	```javascript
@@ -254,6 +262,48 @@ console.log('after forEach');
 - Callbacks effectués à des moments précis
 - Appels via `event.emit('eventName', ...params)`
 - Interceptés via `event.on('eventName', callbackFunc)`
+
+---
+# Les promesses
+---
+# Les promesses
+
+- Asynchrones
+- Capturent les erreurs
+- Transformation fonction callback en promesses via `util.promisify`
+    ```javascript
+    const {promisify}   = require('util');
+    const fs 	    = require('fs');
+    const readFileAsync = promisify(fs.readFile); 
+    
+    readFileAsync(filePath, {encoding: 'utf8'})
+        .then(text => console.log(text))
+        .catch(err => console.error(err))
+    ```
+---
+# Les promesses
+
+- Norme A+ : Utilisation de libs compatibles
+- Manipulation des Arrays en asynchrone : 
+	- `Promise.map`
+	- `Promise.each`
+- Fonctions étendues compatibles A+ au sein de la library `bluebird`
+
+---
+# Les promesses : Gestion des erreurs
+
+```
+myfunctionWithErrorsPrimisify()
+    .then(() => console.log('fini sans erreurs'))
+    .catch(TypeError, err => { console.error(err) })
+    .catch(ReferenceError, err => { console.error(err) })
+    .catch(err => {
+    	console.error('Error non gérée');
+        console.error(err);
+    });
+```
+
+**Attention** : La stack d'erreur se base au catch et non le lieu réel de l'erreur si jamais vous oubliez de la capturer avec la promesse
 
 ---
 # Socket.io
