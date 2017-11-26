@@ -4,15 +4,23 @@
 ![meme](../../resources/bug.jpg)
 </center>
 
+> **Attention** : Pour les utilisateurs de Windows, il s'avère que l'installation de Node.JS au travers de WSL (lLinux dans windows) ne parche pas encore. Ils prévoient de le faire pour courant 2018.
+>
+> Après vérification sur le travail à venir, vous pouvez directement utiliser node.js depuis l'installateur disponible sur leur site officiel.
+>
+> Vous pouvez aussi, au choix, passer par un dualboot sur un système Linux ou, pour les plus aventureux, passer par Visual Sutdio code au lieu de webstorm qui lui, est compatible WSL depuis novembre. Malheureusement, vous devrez chercher par vous même comment faire.
+
 ## Lancement de son application
 
 1. Dans la barre de lancement de votre application, cliquez sur la flèche descendante puis sur *Edit configuration*.
 2. Cliquez sur l'icône **+** puis sur **Node.js**
-3. Dans la ligne *Node Interpreter*, vérifiez que vous êtes bien sur la v6.9.1 sinon mettre le bon chemin (`~/.nvm/versions/node/v8.6.0/bin/node`)
+3. Dans la ligne *Node Interpreter*, vérifiez que vous êtes bien sur la v8.X sinon mettre le bon chemin (`~/.nvm/versions/node/v8.6.0/bin/node`)
 4. Dans *Working directory*, ciblez votre projet
 5. Dans *Javascript File*, mettez bien le fichier d'entrée de votre projet.
 6. Mettez le nom que vous voulez dans *Name*.
 7. Validez
+
+<br>
 
 Vous devriez normalement vous retrouver avec ceci :
 
@@ -24,10 +32,6 @@ Vous devriez normalement vous retrouver avec ceci :
 
 + Le bouton *play* représenté par la flèche verte sert à lancer l'application normalement.
 + Le bouton *Debug* représenté par l'insect vert permet de lancer l'application en mode Debug.
-
-<br>
-<br>
-
 
 ## Mode Debug
 
@@ -46,6 +50,9 @@ En faisant ça, si jamais votre tâche est déjà en cours d'exécution, elle se
     - `script` : Liste des scripts rattachés au debugger
     - Les boutons de navigation au sein du code, des appels et des différents breakpoints.
 2. Callstack de votre breakpoint.
+
+<br>
+
 3. Variables disponibles avec les valeurs courantes au moment de l'arrêt sur le breakpoint :
     - `local` : variables de la fonction en cours d'appel
     - `closure` : variables externes à la fonction mais accessibles dans celle-ci.
@@ -61,8 +68,6 @@ Quand un de vos point d'arrêt est atteint par le programme, l'éditeur vous le 
 </center>
 
 Comme vous pouvez le voir, l'éditeur vous met en surimpression les valeurs des variables.
-
-<br>
 
 ## Profiling V8
 
