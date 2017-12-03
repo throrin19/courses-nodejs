@@ -6,11 +6,13 @@
 
 > **Attention** : Pour les utilisateurs de Windows, il s'avère que l'installation de Node.JS au travers de WSL (lLinux dans windows) ne parche pas encore. Ils prévoient de le faire pour courant 2018.
 >
-> Après vérification sur le travail à venir, vous pouvez directement utiliser node.js depuis l'installateur disponible sur leur site officiel.
+> Après vérification sur le travail à venir, vous pouvez directement utiliser node.js depuis l'installateur disponible sur leur site officiel si vous voulez rester sous webstorm.
 >
-> Vous pouvez aussi, au choix, passer par un dualboot sur un système Linux ou, pour les plus aventureux, passer par Visual Sutdio code au lieu de webstorm qui lui, est compatible WSL depuis novembre. Malheureusement, vous devrez chercher par vous même comment faire.
+> J'ai quand même rajouté, pour les autres personnes, la documentation sur le debuggage de votre projet au sein de VisualStudio Code à la suite de a partie sous Webstorm.
 
-## Lancement de son application
+## Webstorm
+
+### Lancement de son application
 
 1. Dans la barre de lancement de votre application, cliquez sur la flèche descendante puis sur *Edit configuration*.
 2. Cliquez sur l'icône **+** puis sur **Node.js**
@@ -33,7 +35,7 @@ Vous devriez normalement vous retrouver avec ceci :
 + Le bouton *play* représenté par la flèche verte sert à lancer l'application normalement.
 + Le bouton *Debug* représenté par l'insect vert permet de lancer l'application en mode Debug.
 
-## Mode Debug
+### Mode Debug
 
 Comme vu plus haut, vous pouvez simplement lancer votre tâche en mode Debug en cliquant sur le bouton d'insecte.
 
@@ -69,7 +71,7 @@ Quand un de vos point d'arrêt est atteint par le programme, l'éditeur vous le 
 
 Comme vous pouvez le voir, l'éditeur vous met en surimpression les valeurs des variables.
 
-## Profiling V8
+### Profiling V8
 
 Si vous voulez essayer d'optimiser la gestion mémoire, trouver un quelconque goulot d'étranglement ou bien de savoir comment Node.JS gère l'exécution de votre programme, vous pouvez effectuer un profiling de votre projet.
 
@@ -91,6 +93,84 @@ Maintenant, à chaque fois que vous allez arrêter l'exécution du programme, We
 Vous trouverez la documentation complète ici : https://www.jetbrains.com/help/webstorm/2016.3/v8-cpu-and-memory-profiling.html
 
 **Attention** : Si vous faites tourner votre programme longtemps et qu'il a beaucoup d'appels, la mémoire de base de webstorm ne sera pas suffisante à l'analyse de la heap.
+
+## Visual Studio Code
+
+Visual Studio Code est un autre IDE permettant de développer sur différents langages et pouvant être étendu au travers de différents plugins. Visual Studio Code est un *fork* d'**Atom**, et, comme lui, il est codé en Node.JS.
+
+Il faut savoir que, comparé à webstorm, VisualStudio Code se configure via des fichiers JSON à placer dans le répertoire `.vscode` à la recine de votre projet. **Il est plus que conseillé de mettre ce répertoire dans la liste des éléments ignorés par GIT.** En effet vous mettez ici tout ce qui converne le lancement du projet sur votre poste.
+
+Tout ce qui touche au lancement d'un projet se place dans le fichier `launch.json`. Le plus simple est d'en créer un vide, et, quand vous allez dedans pour l'éditer, vous verrez en dessous le bouton `Add a configuration`.
+
+<br><br><br><br><br><br>
+
+Vous devrez vous retrouver avec le contenu suivant :
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [],
+    "compounds": []
+}
+```
+
+Placez votre curseur dans le tableau du field `configurations` puis clieuz de nouveau sur le bouton d'ajout de configuration.
+
+Normalement vous avez une liste déroulante listant les différentes configurations possibles. Sélectionnez celle pour `Node.JS : lancer un programme` et, normalement, vous devriez avoir quelque-chose comme ceci :
+
+```
+{
+   "type": "node",
+   "request": "launch",
+   "name": "Launch Program",
+   "program": "${workspaceRoot}/app.js"
+},
+```
+
+Pour résumer, voici les champs utiles :
+
+- Name : nom de la tâche à lancer
+- program : fichier node.JS d'entrée. La variable `${workspaceRoot}` correspond à la racine de votre projet.
+
+Vous pouvez ajouter d'autres paramètres comme, par exemple, les variables d'environnement via le field `env` et donnant par exemple la chose suivante :
+
+```
+{
+    "type": "node",
+    "request": "launch",
+    "name": "Hapi",
+    "program": "${workspaceRoot}/server.js",
+    "env": {
+        "ENVIRONMENT" : "local"
+    }
+}
+```
+
+<br>
+
+Vous trouverez toute la [documentation officielle ici](https://code.visualstudio.com/docs/editor/debugging).
+
+> Pour ceux sur Windows, vous trouverez [comment activer l'utilisation de vos programmes installés via WSL ici](https://blogs.msdn.microsoft.com/commandline/2017/10/27/running-node-js-on-wsl-from-visual-studio-code/)
+
+Maintenant, pour lancer votre programme en mode Debug, rien de plus simple :
+
+- Soit vous appuyez sur `F5` (ou vous avez la commande `CTRL + F5` pour le mode non debugger mais ne marche pas avec tous les types de programmes)
+- Soit vous allez dans `Debogger > Demarrer le deboggage` (et `démarrer sans déboggage` pour le mode non debugger)
+
+Quand le debug se lance, vous avez cette toolbar qui apparaît :
+
+<center>
+![debug](../../resources/debug_vscode.png)
+<br>
+</center>
+
+Quand un de vos point d'arrêt est atteint par le programme, l'éditeur vous le met en évidence comme ceci :
+
+<center>
+![debug](../../resources/debug_vscode002.png)
+</center>
+
+Vous retrouvez toutes les infos sur vos variables dans l'onglet de gauche intitulé simplement : **Variables**. Ces variables sont notées par niveau de bloc.
 
 ## ESLint
 
