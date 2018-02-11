@@ -1,4 +1,4 @@
-# TP 8 : Socket.io et plugins
+# TP 8 : Socket.io et plugins (deprecated)
 
 <center>
 ![tp8](../../resources/tp8.jpg)
